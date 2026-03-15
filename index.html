@@ -3,158 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RezTech — IT Solutions | Coming Soon</title>
+  <meta name="description" content="RezTech. We build and support the technology that powers your business. Coming soon.">
+
+  <!-- Favicon -->
   <link rel="icon" type="image/jpeg" href="./assets/images/reztechlogo.jpg">
   <link rel="shortcut icon" type="image/jpeg" href="./assets/images/reztechlogo.jpg">
   <link rel="apple-touch-icon" href="./assets/images/reztechlogo.jpg">
-  <title>RezTech — IT Solutions | Coming Soon</title>
-  <meta name="description" content="RezTech. We build and support the technology that powers your business. Coming soon.">
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #0a0e14;
-      --surface: #131920;
-      --border: #1e2836;
-      --text: #e6edf3;
-      --muted: #8b9cad;
-      --accent: #46d180;
-      --accent-dim: rgba(70, 209, 128, 0.15);
-    }
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-    *, *::before, *::after { box-sizing: border-box; }
-    html { font-size: 100%; scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      min-height: 100vh;
-      font-family: 'DM Sans', system-ui, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 2rem 1.5rem;
-      position: relative;
-      overflow-x: hidden;
-    }
+  <!-- Styles -->
+  <link rel="stylesheet" href="./css/main.css">
 
-    /* subtle grid background */
-    body::before {
-      content: '';
-      position: fixed;
-      inset: 0;
-      background-image:
-        linear-gradient(var(--border) 1px, transparent 1px),
-        linear-gradient(90deg, var(--border) 1px, transparent 1px);
-      background-size: 60px 60px;
-      opacity: 0.4;
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    .wrap {
-      position: relative;
-      z-index: 1;
-      text-align: center;
-      max-width: 42rem;
-    }
-
-    .logo-img {
-      display: block;
-      height: clamp(3rem, 10vw, 4.5rem);
-      width: auto;
-      margin: 0 auto 1rem;
-      object-fit: contain;
-    }
-
-    .tagline {
-      font-size: clamp(0.95rem, 2.5vw, 1.1rem);
-      color: var(--muted);
-      font-weight: 500;
-      margin: 0 0 2.5rem;
-      letter-spacing: 0.02em;
-    }
-
-    .badge {
-      display: inline-block;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.75rem;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.2em;
-      color: var(--accent);
-      background: var(--accent-dim);
-      padding: 0.5rem 1rem;
-      border-radius: 6px;
-      border: 1px solid rgba(70, 209, 128, 0.35);
-      margin-bottom: 2rem;
-    }
-
-    h1 {
-      font-size: clamp(1.75rem, 4vw, 2.25rem);
-      font-weight: 700;
-      margin: 0 0 1rem;
-      line-height: 1.25;
-      color: var(--text);
-    }
-
-    .lead {
-      font-size: 1.05rem;
-      color: var(--muted);
-      line-height: 1.6;
-      margin: 0 0 2rem;
-    }
-
-    .cta {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.9rem;
-      color: var(--accent);
-      text-decoration: none;
-      padding: 0.6rem 1.2rem;
-      border: 1px solid rgba(70, 209, 128, 0.4);
-      border-radius: 8px;
-      background: var(--accent-dim);
-      transition: background 0.2s, border-color 0.2s;
-    }
-    .cta:hover {
-      background: rgba(70, 209, 128, 0.25);
-      border-color: var(--accent);
-    }
-
-    .footer {
-      margin-top: 3rem;
-      font-size: 0.85rem;
-      color: var(--muted);
-    }
-    .footer a {
-      color: var(--muted);
-      text-decoration: none;
-    }
-    .footer a:hover {
-      color: var(--accent);
-    }
-  </style>
+  <!-- Tailwind: config must load before CDN -->
+  <script src="./js/config.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <div class="wrap">
-    <img src="./assets/images/reztechlogo.jpg" alt="RezTech" class="logo-img" width="160" height="80">
-    <p class="badge">IT Solutions</p>
-    <p class="tagline">Infrastructure · Software · Support</p>
-
-    <h1>Something great is in the works</h1>
-    <p class="lead">
-      We’re building the tools and services to help your business run on solid tech—from cloud and security to custom software and ongoing support.
+<body class="grid-bg min-h-screen flex flex-col items-center justify-center px-6 py-8 overflow-x-hidden font-sans text-[#e6edf3] bg-dark">
+  <div class="relative z-10 text-center max-w-[42rem]">
+    <img src="./assets/images/reztechlogo.jpg" alt="RezTech" class="block h-12 sm:h-14 md:h-[4.5rem] w-auto mx-auto mb-4 object-contain" width="160" height="80">
+    <p class="inline-block font-mono text-xs font-medium uppercase tracking-[0.2em] text-accent bg-accent-dim border border-accent-border rounded-md px-4 py-2 mb-8">
+      IT Solutions
+    </p>
+    <p class="text-[0.95rem] sm:text-lg font-medium text-[#8b9cad] tracking-wide mb-10">
+      Infrastructure · Software · Support
     </p>
 
-    <a href="mailto:contact@reztech.online" class="cta">Get in touch →</a>
+    <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight text-[#e6edf3] mb-4">
+      Something great is in the works
+    </h1>
+    <p class="text-[1.05rem] text-[#8b9cad] leading-relaxed mb-8">
+      We're building the tools and services to help your business run on solid tech—from cloud and security to custom software and ongoing support.
+    </p>
 
-    <p class="footer">
-      RezTech · <a href="mailto:contact@reztech.online">contact@reztech.online</a>
+    <a href="mailto:contact@reztech.online" class="inline-flex items-center gap-2 font-mono text-sm text-accent no-underline py-2.5 px-5 rounded-lg border border-accent/40 bg-accent-dim transition-colors hover:bg-accent/25 hover:border-accent">
+      Get in touch →
+    </a>
+
+    <p class="mt-12 text-sm text-[#8b9cad]">
+      RezTech · <a href="mailto:contact@reztech.online" class="text-[#8b9cad] no-underline hover:text-accent">contact@reztech.online</a>
     </p>
   </div>
+
+  <script src="./js/main.js"></script>
 </body>
 </html>
