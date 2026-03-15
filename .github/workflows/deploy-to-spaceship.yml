@@ -7,6 +7,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    timeout-minutes: 1
     environment: prod
     steps:
       - uses: actions/checkout@v4
@@ -19,12 +20,20 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           server-dir: ${{ secrets.FTP_REMOTE_PATH }}
           exclude: |
-            - .git/
-            - .git**
-            - .github/
-            - node_modules/
-            - workflows/
+            - .git
+            - .git/**
+            - .github
+            - .github/**
+            - node_modules
+            - node_modules/**
+            - workflows
+            - workflows/**
             - README.md
             - LICENSE
             - package.json
             - package-lock.json
+            - .gitignore
+            - .editorconfig
+            - *.log
+            - .env
+            - .env.*
