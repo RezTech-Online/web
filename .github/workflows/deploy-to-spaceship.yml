@@ -20,20 +20,18 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           server-dir: ${{ secrets.FTP_REMOTE_PATH }}
           exclude: |
-            - .git
-            - .git/**
-            - .github
-            - .github/**
-            - node_modules
-            - node_modules/**
-            - workflows
-            - workflows/**
-            - README.md
-            - LICENSE
-            - package.json
-            - package-lock.json
-            - .gitignore
-            - .editorconfig
-            - *.log
-            - .env
-            - .env.*
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            **/.github*
+            **/.github*/**
+            **/workflows/**
+            **/README.md
+            **/LICENSE
+            **/package.json
+            **/package-lock.json
+            **/.gitignore
+            **/.editorconfig
+            **/*.log
+            **/.env
+            **/.env.*
