@@ -16,17 +16,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="./css/main.css">
-
-  <!-- Tailwind: config must load before CDN -->
-  <script src="./js/config.js"></script>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body class="grid-bg min-h-screen flex flex-col items-center justify-center px-6 py-8 overflow-x-hidden font-sans text-[#e6edf3] bg-dark">
+<body class="min-h-screen flex flex-col items-center justify-center px-6 py-8 overflow-x-hidden text-[#e6edf3] bg-[#0a0e14] font-['DM_Sans',system-ui,sans-serif]">
+  <div class="fixed inset-0 z-0 pointer-events-none opacity-40 [background-image:linear-gradient(#1e2836_1px,transparent_1px),linear-gradient(90deg,#1e2836_1px,transparent_1px)] [background-size:60px_60px]" aria-hidden="true"></div>
   <div class="relative z-10 text-center max-w-[42rem]">
     <img src="./assets/images/reztechlogo.jpg" alt="RezTech" class="block h-12 sm:h-14 md:h-[4.5rem] w-auto mx-auto mb-4 object-contain" width="160" height="80">
-    <p class="inline-block font-mono text-xs font-medium uppercase tracking-[0.2em] text-accent bg-accent-dim border border-accent-border rounded-md px-4 py-2 mb-8">
+    <p class="inline-block text-xs font-medium uppercase tracking-[0.2em] text-[#46d180] bg-[rgba(70,209,128,0.15)] border border-[rgba(70,209,128,0.35)] rounded-md px-4 py-2 mb-8 font-['JetBrains_Mono',monospace]">
       IT Solutions
     </p>
     <p class="text-[0.95rem] sm:text-lg font-medium text-[#8b9cad] tracking-wide mb-10">
@@ -40,12 +36,12 @@
       We're building the tools and services to help your business run on solid tech—from cloud and security to custom software and ongoing support.
     </p>
 
-    <a href="mailto:contact@reztech.online" class="inline-flex items-center gap-2 font-mono text-sm text-accent no-underline py-2.5 px-5 rounded-lg border border-accent/40 bg-accent-dim transition-colors hover:bg-accent/25 hover:border-accent">
+    <a href="mailto:contact@reztech.online" class="inline-flex items-center gap-2 text-sm text-[#46d180] no-underline py-2.5 px-5 rounded-lg border border-[rgba(70,209,128,0.4)] bg-[rgba(70,209,128,0.15)] transition-colors hover:bg-[rgba(70,209,128,0.25)] hover:border-[#46d180] font-['JetBrains_Mono',monospace]">
       Get in touch →
     </a>
 
     <p class="mt-12 text-sm text-[#8b9cad]">
-      RezTech · <a href="mailto:contact@reztech.online" class="text-[#8b9cad] no-underline hover:text-accent">contact@reztech.online</a>
+      RezTech · <a href="mailto:contact@reztech.online" class="text-[#8b9cad] no-underline hover:text-[#46d180]">contact@reztech.online</a>
     </p>
   </div>
 
